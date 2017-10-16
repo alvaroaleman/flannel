@@ -234,7 +234,7 @@ func (ksm *kubeSubnetManager) AcquireLease(ctx context.Context, attrs *subnet.Le
 	}
 	if n.Annotations[backendDataAnnotation] != string(bd) ||
 		n.Annotations[backendTypeAnnotation] != attrs.BackendType ||
-		n.Annotations[backendPublicIPAnnotation] != attrs.PublicIP.String() ||
+		//n.Annotations[backendPublicIPAnnotation] != attrs.PublicIP.String() ||
 		n.Annotations[subnetKubeManagedAnnotation] != "true" {
 		n.Annotations[backendTypeAnnotation] = attrs.BackendType
 		n.Annotations[backendDataAnnotation] = string(bd)
